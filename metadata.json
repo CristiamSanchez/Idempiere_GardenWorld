@@ -1,0 +1,6 @@
+{
+  "name": "iDempiere ERP PWA Client",
+  "description": "Cliente web moderno y Progressive Web App para iDempiere ERP con autenticación en 1 y 2 pasos (multitenant en cascada), gestión de CORS y explorador de API REST v1.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es" class="h-full bg-slate-950 text-slate-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>iDempiere ERP PWA Client</title>
+    <meta name="description" content="Cliente web moderno y Progressive Web App para iDempiere ERP con autenticación en 1 y 2 pasos (multitenant en cascada), gestión de CORS y explorador de API REST v1." />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="iDempiere ERP PWA Client" />
+    <meta property="og:description" content="Cliente web moderno y Progressive Web App para iDempiere ERP con autenticación en 1 y 2 pasos (multitenant en cascada), gestión de CORS y explorador de API REST v1." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- PWA Settings -->
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="iDempiere" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body class="h-full antialiased font-sans bg-slate-950 text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Register service worker if supported
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(
+            (reg) => console.log('SW registrado con éxito:', reg.scope),
+            (err) => console.warn('Fallo al registrar SW:', err)
+          );
+        });
+      }
+    </script>
+  </body>
+</html>

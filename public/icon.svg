@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="idempiere-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#0f172a" />
+  <rect x="24" y="24" width="464" height="464" rx="112" stroke="url(#idempiere-grad)" stroke-width="8" stroke-opacity="0.4" fill="none" />
+  
+  <!-- Stylized iDempiere ERP Hub Icon -->
+  <g filter="url(#shadow)" transform="translate(64, 64) scale(0.75)">
+    <!-- Central Hexagonal Core -->
+    <polygon points="256,60 416,152 416,338 256,430 96,338 96,152" fill="url(#idempiere-grad)" />
+    
+    <!-- Inner Architecture Nodes -->
+    <circle cx="256" cy="245" r="54" fill="#0f172a" />
+    <circle cx="256" cy="245" r="32" fill="#38bdf8" />
+    
+    <circle cx="160" cy="180" r="22" fill="#ffffff" />
+    <circle cx="352" cy="180" r="22" fill="#ffffff" />
+    <circle cx="160" cy="310" r="22" fill="#ffffff" />
+    <circle cx="352" cy="310" r="22" fill="#ffffff" />
+    
+    <!-- Connection lines -->
+    <line x1="256" y1="245" x2="160" y2="180" stroke="#0f172a" stroke-width="12" stroke-linecap="round" />
+    <line x1="256" y1="245" x2="352" y2="180" stroke="#0f172a" stroke-width="12" stroke-linecap="round" />
+    <line x1="256" y1="245" x2="160" y2="310" stroke="#0f172a" stroke-width="12" stroke-linecap="round" />
+    <line x1="256" y1="245" x2="352" y2="310" stroke="#0f172a" stroke-width="12" stroke-linecap="round" />
+  </g>
+  
+  <!-- ERP text badge -->
+  <rect x="180" y="400" width="152" height="48" rx="24" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-width="3" />
+  <text x="256" y="433" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="4">ERP PWA</text>
+</svg>
